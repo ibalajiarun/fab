@@ -72,14 +72,14 @@ public class MessageHandler {
             ConsensusMessage consMsg = (ConsensusMessage) sm;
 
             if (tomLayer.controller.getStaticConf().getUseMACs() == 0 || consMsg.authenticated || consMsg.getSender() == myId) acceptor.deliver(consMsg);
-            else if (consMsg.getType() == MessageFactory.ACCEPT && consMsg.getProof() != null) {
+            else if (consMsg.getType() == MessageFactory.COMMITPROOF && consMsg.getProof() != null) {
                                         
                 //We are going to verify the MAC vector at the algorithm level
                 HashMap<Integer, byte[]> macVector = (HashMap<Integer, byte[]>) consMsg.getProof();
                                
                 byte[] recvMAC = macVector.get(myId);
                 
-                ConsensusMessage cm = new ConsensusMessage(MessageFactory.ACCEPT,consMsg.getNumber(),
+                ConsensusMessage cm = new ConsensusMessage(MessageFactory.COMMITPROOF,consMsg.getNumber(),
                         consMsg.getEpoch(), consMsg.getSender(), consMsg.getValue());
                 
                 ByteArrayOutputStream bOut = new ByteArrayOutputStream(248);

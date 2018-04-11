@@ -33,7 +33,6 @@ import bftsmart.consensus.messages.ConsensusMessage;
 import bftsmart.consensus.roles.Acceptor;
 import bftsmart.consensus.roles.Proposer;
 import bftsmart.reconfiguration.ServerViewController;
-import bftsmart.tom.core.TOMLayer;
 import bftsmart.tom.util.Logger;
 
 
@@ -412,8 +411,8 @@ public final class ExecutionManager {
                     if (msg.getEpoch() == epoch.getTimestamp() &&
                             Arrays.equals(propHash, msg.getValue())) {
                         
-                        if (msg.getType() == MessageFactory.WRITE) countWrites++;
-                        else if (msg.getType() == MessageFactory.ACCEPT) countAccepts++;
+                        if (msg.getType() == MessageFactory.ACCEPT) countWrites++;
+                        else if (msg.getType() == MessageFactory.COMMITPROOF) countAccepts++;
                     }
                 }
             }

@@ -1090,12 +1090,12 @@ public class Synchronizer {
             }
             e.addToProof(cm);
             
-            if (cm.getType() == MessageFactory.ACCEPT) {
-                e.setAccept(cm.getSender(), cm.getValue());
+            if (cm.getType() == MessageFactory.COMMITPROOF) {
+                e.setCommitProof(cm.getSender(), cm.getValue());
             }
             
-            else if (cm.getType() == MessageFactory.WRITE) {
-                e.setWrite(cm.getSender(), cm.getValue());
+            else if (cm.getType() == MessageFactory.ACCEPT) {
+                e.setAccept(cm.getSender(), cm.getValue());
             }
             
             
@@ -1209,9 +1209,9 @@ public class Synchronizer {
                 }
             }
             if (this.controller.getStaticConf().isBFT()) {
-                e.setWrite(me, hash);
-            } else {
                 e.setAccept(me, hash);
+            } else {
+                e.setCommitProof(me, hash);
 
                 /********* LEADER CHANGE CODE ********/
                 Logger.println("(Synchronizer.finalise) [CFT Mode] Setting consensus " + currentCID + " QuorumWrite tiemstamp to " + e.getConsensus().getEts() + " and value " + Arrays.toString(hash));
@@ -1229,15 +1229,15 @@ public class Synchronizer {
                 tom.imAmTheLeader();
             } // waik up the thread that propose values in normal operation
 
-            // send a WRITE/ACCEPT message to the other replicas
+            // send a ACCEPT/COMMITPROOF message to the other replicas
             if (this.controller.getStaticConf().isBFT()) {
-                System.out.println("(Synchronizer.finalise) sending WRITE message for CID " + currentCID + ", timestamp " + e.getTimestamp() + ", value " + Arrays.toString(e.propValueHash));
-                communication.send(this.controller.getCurrentViewOtherAcceptors(),
-                        acceptor.getFactory().createWrite(currentCID, e.getTimestamp(), e.propValueHash));
-            } else {
                 System.out.println("(Synchronizer.finalise) sending ACCEPT message for CID " + currentCID + ", timestamp " + e.getTimestamp() + ", value " + Arrays.toString(e.propValueHash));
                 communication.send(this.controller.getCurrentViewOtherAcceptors(),
                         acceptor.getFactory().createAccept(currentCID, e.getTimestamp(), e.propValueHash));
+            } else {
+                System.out.println("(Synchronizer.finalise) sending COMMITPROOF message for CID " + currentCID + ", timestamp " + e.getTimestamp() + ", value " + Arrays.toString(e.propValueHash));
+                communication.send(this.controller.getCurrentViewOtherAcceptors(),
+                        acceptor.getFactory().createCommitProof(currentCID, e.getTimestamp(), e.propValueHash));
             }
         } else {
             Logger.println("(Synchronizer.finalise) sync phase failed for regency" + regency);

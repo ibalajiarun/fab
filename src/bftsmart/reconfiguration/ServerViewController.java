@@ -36,7 +36,8 @@ public class ServerViewController extends ViewController {
     public static final int REMOVE_SERVER = 1;
     public static final int CHANGE_F = 2;
     
-    private int quorumBFT; // ((n + f) / 2) replicas
+    private int fastQuorumBFT; // ((n + 3f + 1) / 2) replicas
+    private int slowQuorumBFT; // ((n + f + 1) / 2) replicas
     private int quorumCFT; // (n / 2) replicas
     private int[] otherProcesses;
     private int[] lastJoinStet;
@@ -304,7 +305,8 @@ public class ServerViewController extends ViewController {
                 }
             }
 
-            this.quorumBFT = (int) Math.ceil((this.currentView.getN() + this.currentView.getF()) / 2);
+            this.fastQuorumBFT = (int) Math.ceil((this.currentView.getN() + 3*this.currentView.getF() + 1) / 2);
+            this.slowQuorumBFT = (int) Math.ceil((this.currentView.getN() + this.currentView.getF() + 1) / 2);
             this.quorumCFT = (int) Math.ceil(this.currentView.getN() / 2);
         } else if (this.currentView != null && this.currentView.isMember(getStaticConf().getProcessId())) {
             //TODO: Left the system in newView -> LEAVE
@@ -321,6 +323,10 @@ public class ServerViewController extends ViewController {
     
 
     public int getQuorum() {
-        return getStaticConf().isBFT() ? quorumBFT : quorumCFT;
+        return getStaticConf().isBFT() ? fastQuorumBFT : quorumCFT;
+    }
+
+    public int getSlowQuorum() {
+        return getStaticConf().isBFT() ? slowQuorumBFT : quorumCFT;
     }
 }

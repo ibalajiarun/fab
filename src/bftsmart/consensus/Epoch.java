@@ -39,10 +39,10 @@ public class Epoch implements Serializable {
     
     private final int timestamp; // Epochs's timestamp
     private final int me; // Process ID
-    private boolean[] writeSetted;
     private boolean[] acceptSetted;
-    private byte[][] write; // WRITE values from other processes
-    private byte[][] accept; // accepted values from other processes
+    private boolean[] commitProofSetted;
+    private byte[][] accept; // ACCEPT values from other processes
+    private byte[][] commitProof; // accepted values from other processes
     
     private boolean alreadyRemoved = false; // indicates if this epoch was removed from its consensus
 
@@ -74,42 +74,42 @@ public class Epoch implements Serializable {
         //int[] acceptors = manager.getAcceptors();
         int n = controller.getCurrentViewN();
 
-        writeSetted = new boolean[n];
         acceptSetted = new boolean[n];
+        commitProofSetted = new boolean[n];
 
-        Arrays.fill(writeSetted, false);
         Arrays.fill(acceptSetted, false);
+        Arrays.fill(commitProofSetted, false);
 
         if (timestamp == 0) {
-            this.write = new byte[n][];
             this.accept = new byte[n][];
+            this.commitProof = new byte[n][];
 
-            Arrays.fill((Object[]) write, null);
             Arrays.fill((Object[]) accept, null);
+            Arrays.fill((Object[]) commitProof, null);
         } else {
             Epoch previousEpoch = consensus.getEpoch(timestamp - 1, controller);
 
-            this.write = previousEpoch.getWrite();
-            this.accept = previousEpoch.getAccept();
+            this.accept = previousEpoch.getCommitProof();
+            this.commitProof = previousEpoch.getCommitProof();
         }
     }
 
     // If a view change takes place and concurrentely this consensus is still
-    // receiving messages, the write and accept arrays must be updated
+    // receiving messages, the accept and commitProof arrays must be updated
     private void updateArrays() {
         
         if (lastView.getId() != controller.getCurrentViewId()) {
             
             int n = controller.getCurrentViewN();
             
-            byte[][] write = new byte[n][];
             byte[][] accept = new byte[n][];
+            byte[][] commitProof = new byte[n][];
             
-            boolean[] writeSetted = new boolean[n];
             boolean[] acceptSetted = new boolean[n];
+            boolean[] commitProofSetted = new boolean[n];
 
-            Arrays.fill(writeSetted, false);
             Arrays.fill(acceptSetted, false);
+            Arrays.fill(commitProofSetted, false);
         
             for (int pid : lastView.getProcesses()) {
                 
@@ -118,20 +118,20 @@ public class Epoch implements Serializable {
                     int currentPos = controller.getCurrentViewPos(pid);
                     int lastPos = lastView.getPos(pid);
                     
-                    write[currentPos] = this.write[lastPos];
                     accept[currentPos] = this.accept[lastPos];
+                    commitProof[currentPos] = this.commitProof[lastPos];
 
-                    writeSetted[currentPos] = this.writeSetted[lastPos];
                     acceptSetted[currentPos] = this.acceptSetted[lastPos];
+                    commitProofSetted[currentPos] = this.commitProofSetted[lastPos];
 
                 }
             }
             
-            this.write = write;
             this.accept = accept;
+            this.commitProof = commitProof;
 
-            this.writeSetted = writeSetted;
             this.acceptSetted = acceptSetted;
+            this.commitProofSetted = commitProofSetted;
 
             lastView = controller.getCurrentView();
             
@@ -186,28 +186,9 @@ public class Epoch implements Serializable {
     }
 
     /**
-     * Informs if there is a WRITE value from a replica
+     * Informs if there is a ACCEPT value from a replica
      * @param acceptor The replica ID
-     * @return True if there is a WRITE value from a replica, false otherwise
-     */
-    public boolean isWriteSetted(int acceptor) {
-        
-        updateArrays();
-        
-        //******* EDUARDO BEGIN **************//
-        int p = this.controller.getCurrentViewPos(acceptor);
-        if(p >= 0){
-            return write[p] != null;
-        }else{
-            return false;
-        }
-        //******* EDUARDO END **************//
-    }
-
-    /**
-     * Informs if there is a accepted value from a replica
-     * @param acceptor The replica ID
-     * @return True if there is a accepted value from a replica, false otherwise
+     * @return True if there is a ACCEPT value from a replica, false otherwise
      */
     public boolean isAcceptSetted(int acceptor) {
         
@@ -224,18 +205,37 @@ public class Epoch implements Serializable {
     }
 
     /**
-     * Retrives the WRITE value from the specified replica
+     * Informs if there is a accepted value from a replica
+     * @param acceptor The replica ID
+     * @return True if there is a accepted value from a replica, false otherwise
+     */
+    public boolean isCommitProofSetted(int acceptor) {
+        
+        updateArrays();
+        
+        //******* EDUARDO BEGIN **************//
+        int p = this.controller.getCurrentViewPos(acceptor);
+        if(p >= 0){
+            return commitProof[p] != null;
+        }else{
+            return false;
+        }
+        //******* EDUARDO END **************//
+    }
+
+    /**
+     * Retrives the ACCEPT value from the specified replica
      * @param acceptor The replica ID
      * @return The value from the specified replica
      */
-    public byte[] getWrite(int acceptor) {
+    public byte[] getAccept(int acceptor) {
         
         updateArrays();
         
         //******* EDUARDO BEGIN **************//
         int p = this.controller.getCurrentViewPos(acceptor);
         if(p >= 0){        
-            return this.write[p];
+            return this.accept[p];
         }else{
             return null;
         }
@@ -243,27 +243,27 @@ public class Epoch implements Serializable {
     }
 
     /**
-     * Retrieves all WRITE value from all replicas
+     * Retrieves all ACCEPT value from all replicas
      * @return The values from all replicas
      */
-    public byte[][] getWrite() {
-        return this.write;
+    public byte[][] getAccept() {
+        return this.accept;
     }
 
     /**
-     * Sets the WRITE value from the specified replica
+     * Sets the ACCEPT value from the specified replica
      * @param acceptor The replica ID
      * @param value The valuefrom the specified replica
      */
-    public void setWrite(int acceptor, byte[] value) { // TODO: Race condition?
+    public void setAccept(int acceptor, byte[] value) { // TODO: Race condition?
         
         updateArrays();
         
         //******* EDUARDO BEGIN **************//
         int p = this.controller.getCurrentViewPos(acceptor);
-        if (p >=0 /*&& !writeSetted[p] && !isFrozen() */) { //it can only be setted once
-            write[p] = value;
-            writeSetted[p] = true;
+        if (p >=0 /*&& !acceptSetted[p] && !isFrozen() */) { //it can only be setted once
+            accept[p] = value;
+            acceptSetted[p] = true;
         }
         //******* EDUARDO END **************//
     }
@@ -273,14 +273,14 @@ public class Epoch implements Serializable {
      * @param acceptor The replica ID
      * @return The value accepted from the specified replica
      */
-    public byte[] getAccept(int acceptor) {
+    public byte[] getCommitProof(int acceptor) {
         
         updateArrays();
         
         //******* EDUARDO BEGIN **************//
          int p = this.controller.getCurrentViewPos(acceptor);
         if(p >= 0){        
-        return accept[p];
+        return commitProof[p];
         }else{
             return null;
         }
@@ -291,8 +291,8 @@ public class Epoch implements Serializable {
      * Retrieves all accepted values from all replicas
      * @return The values accepted from all replicas
      */
-    public byte[][] getAccept() {
-        return accept;
+    public byte[][] getCommitProof() {
+        return commitProof;
     }
 
     /**
@@ -300,26 +300,26 @@ public class Epoch implements Serializable {
      * @param acceptor The replica ID
      * @param value The value accepted from the specified replica
      */
-    public void setAccept(int acceptor, byte[] value) { // TODO: race condition?
+    public void setCommitProof(int acceptor, byte[] value) { // TODO: race condition?
         
         updateArrays();
         
         //******* EDUARDO BEGIN **************//
         int p = this.controller.getCurrentViewPos(acceptor);
         if (p >= 0 /*&& !strongSetted[p] && !isFrozen()*/) { //it can only be setted once
-            accept[p] = value;
-            acceptSetted[p] = true;
+            commitProof[p] = value;
+            commitProofSetted[p] = true;
         }
         //******* EDUARDO END **************//
     }
 
     /**
-     * Retrieves the amount of replicas from which this process received a WRITE value
+     * Retrieves the amount of replicas from which this process received a ACCEPT value
      * @param value The value in question
      * @return Amount of replicas from which this process received the specified value
      */
-    public int countWrite(byte[] value) {
-        return count(writeSetted,write, value);
+    public int countAccept(byte[] value) {
+        return count(acceptSetted, accept, value);
     }
 
     /**
@@ -327,8 +327,8 @@ public class Epoch implements Serializable {
      * @param value The value in question
      * @return Amount of replicas from which this process accepted the specified value
      */
-    public int countAccept(byte[] value) {
-        return count(acceptSetted,accept, value);
+    public int countCommitProof(byte[] value) {
+        return count(commitProofSetted, commitProof, value);
     }
 
     /**
@@ -362,13 +362,13 @@ public class Epoch implements Serializable {
         buffWrite.append("\n\t\tWrites=(");
         buffAccept.append("\n\t\tAccepts=(");
 
-        for (int i = 0; i < write.length - 1; i++) {
-            buffWrite.append("[" + str(write[i]) + "], ");
-            buffAccept.append("[" + str(accept[i]) + "], ");
+        for (int i = 0; i < accept.length - 1; i++) {
+            buffWrite.append("[" + str(accept[i]) + "], ");
+            buffAccept.append("[" + str(commitProof[i]) + "], ");
         }
 
-        buffWrite.append("[" + str(write[write.length - 1]) +"])");
-        buffAccept.append("[" + str(accept[accept.length - 1]) + "])");
+        buffWrite.append("[" + str(accept[accept.length - 1]) +"])");
+        buffAccept.append("[" + str(commitProof[commitProof.length - 1]) + "])");
 
         return "\n\t\tCID=" + consensus.getId() + " \n\t\tTS=" + getTimestamp() + " " + "\n\t\tPropose=[" + (propValueHash != null ? str(propValueHash) : null) + "] " + buffWrite + " " + buffAccept;
     }
@@ -393,17 +393,17 @@ public class Epoch implements Serializable {
 
         int n = controller.getCurrentViewN();
         
-        writeSetted = new boolean[n];
         acceptSetted = new boolean[n];
+        commitProofSetted = new boolean[n];
 
-        Arrays.fill(writeSetted, false);
         Arrays.fill(acceptSetted, false);
+        Arrays.fill(commitProofSetted, false);
 
-        this.write = new byte[n][];
         this.accept = new byte[n][];
+        this.commitProof = new byte[n][];
 
-        Arrays.fill((Object[]) write, null);
         Arrays.fill((Object[]) accept, null);
+        Arrays.fill((Object[]) commitProof, null);
         
         this.proof = new HashSet<ConsensusMessage>();
     }

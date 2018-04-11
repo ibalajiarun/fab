@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5d772e5d-9a73-46eb-bd83-bf61031283f7" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/bin/BFT-SMaRt.jar" beforeDir="false" afterPath="$PROJECT_DIR$/bin/BFT-SMaRt.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bftsmart/communication/MessageHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bftsmart/communication/MessageHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bftsmart/communication/client/netty/NettyClientServerCommunicationSystemServerSide$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bftsmart/communication/client/netty/NettyClientServerCommunicationSystemServerSide$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bftsmart/communication/client/netty/NettyClientServerCommunicationSystemServerSide$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bftsmart/communication/client/netty/NettyClientServerCommunicationSystemServerSide$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bftsmart/communication/client/netty/NettyClientServerCommunicationSystemServerSide.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bftsmart/communication/client/netty/NettyClientServerCommunicationSystemServerSide.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bftsmart/consensus/Epoch.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bftsmart/consensus/Epoch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bftsmart/consensus/messages/ConsensusMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bftsmart/consensus/messages/ConsensusMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bftsmart/consensus/messages/MessageFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bftsmart/consensus/messages/MessageFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bftsmart/consensus/roles/Acceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bftsmart/consensus/roles/Acceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bftsmart/demo/microbenchmarks/LatencyServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bftsmart/demo/microbenchmarks/LatencyServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bftsmart/demo/microbenchmarks/ThroughputLatencyServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bftsmart/demo/microbenchmarks/ThroughputLatencyServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bftsmart/reconfiguration/ServerViewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bftsmart/reconfiguration/ServerViewController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bftsmart/statemanagement/strategy/StandardStateManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bftsmart/statemanagement/strategy/StandardStateManager$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bftsmart/statemanagement/strategy/StandardStateManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bftsmart/statemanagement/strategy/StandardStateManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bftsmart/statemanagement/strategy/durability/DurableStateManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bftsmart/statemanagement/strategy/durability/DurableStateManager$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bftsmart/statemanagement/strategy/durability/DurableStateManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bftsmart/statemanagement/strategy/durability/DurableStateManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bftsmart/tom/core/ExecutionManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bftsmart/tom/core/ExecutionManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bftsmart/tom/core/Synchronizer.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bftsmart/tom/core/Synchronizer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bftsmart/tom/core/messages/TOMMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bftsmart/tom/core/messages/TOMMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/hosts.config" beforeDir="false" afterPath="$PROJECT_DIR$/config/hosts.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/system.config" beforeDir="false" afterPath="$PROJECT_DIR$/config/system.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bftsmart/communication/MessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bftsmart/communication/MessageHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bftsmart/communication/client/netty/NettyClientServerCommunicationSystemServerSide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bftsmart/communication/client/netty/NettyClientServerCommunicationSystemServerSide.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bftsmart/consensus/Epoch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bftsmart/consensus/Epoch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bftsmart/consensus/messages/ConsensusMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bftsmart/consensus/messages/ConsensusMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bftsmart/consensus/messages/MessageFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bftsmart/consensus/messages/MessageFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bftsmart/consensus/roles/Acceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bftsmart/consensus/roles/Acceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bftsmart/demo/microbenchmarks/LatencyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bftsmart/demo/microbenchmarks/LatencyServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bftsmart/demo/microbenchmarks/ThroughputLatencyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bftsmart/demo/microbenchmarks/ThroughputLatencyServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bftsmart/reconfiguration/ServerViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bftsmart/reconfiguration/ServerViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bftsmart/statemanagement/strategy/StandardStateManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bftsmart/statemanagement/strategy/StandardStateManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bftsmart/statemanagement/strategy/durability/DurableStateManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bftsmart/statemanagement/strategy/durability/DurableStateManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bftsmart/tom/core/ExecutionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bftsmart/tom/core/ExecutionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bftsmart/tom/core/Synchronizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bftsmart/tom/core/Synchronizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bftsmart/tom/core/messages/TOMMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bftsmart/tom/core/messages/TOMMessage.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="Acceptor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/bftsmart/consensus/roles/Acceptor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="241">
+              <caret line="108" column="27" selection-start-line="108" selection-start-column="27" selection-end-line="108" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/bftsmart/communication/MessageHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="66" column="24" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServerCommunicationSystem.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/bftsmart/communication/ServerCommunicationSystem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="991">
+              <caret line="125" column="13" lean-forward="true" selection-start-line="125" selection-start-column="13" selection-end-line="125" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NettyClientServerCommunicationSystemClientSide.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/bftsmart/communication/client/netty/NettyClientServerCommunicationSystemClientSide.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="356">
+              <caret line="252" column="22" selection-start-line="252" selection-start-column="22" selection-end-line="252" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LatencyClient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/bftsmart/demo/microbenchmarks/LatencyClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="53" column="45" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServiceProxy.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/bftsmart/tom/ServiceProxy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5833">
+              <caret line="350" lean-forward="true" selection-start-line="350" selection-end-line="350" />
+              <folding>
+                <element signature="e#4507#4508#0" expanded="true" />
+                <element signature="e#4568#4569#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hosts.config" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/hosts.config">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Epoch.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/bftsmart/consensus/Epoch.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="218">
+              <caret line="257" column="25" selection-start-line="257" selection-start-column="25" selection-end-line="257" selection-end-column="25" />
+              <folding>
+                <element signature="e#9065#9066#0" expanded="true" />
+                <element signature="e#9094#9095#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>bind(</find>
+      <find>totalordermulticast.timeout</find>
+      <find>timeout</find>
+      <find>replyQuorum</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/bftsmart/communication/client/netty/NettyClientServerCommunicationSystemServerSide.java" />
+        <option value="$PROJECT_DIR$/src/bftsmart/consensus/messages/ConsensusMessage.java" />
+        <option value="$PROJECT_DIR$/src/bftsmart/reconfiguration/ServerViewController.java" />
+        <option value="$PROJECT_DIR$/src/bftsmart/consensus/Epoch.java" />
+        <option value="$PROJECT_DIR$/src/bftsmart/tom/core/messages/TOMMessage.java" />
+        <option value="$PROJECT_DIR$/src/bftsmart/consensus/messages/MessageFactory.java" />
+        <option value="$PROJECT_DIR$/config/hosts.config" />
+        <option value="$PROJECT_DIR$/config/system.config" />
+        <option value="$PROJECT_DIR$/src/bftsmart/consensus/roles/Acceptor.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <option name="groupStructurally" value="true" />
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="22" />
+    <option name="width" value="1393" />
+    <option name="height" value="878" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="fab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fab" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fab" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fab" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fab" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="bftsmart" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fab" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="bftsmart" type="462c0819:PsiDirectoryNode" />
+              <item name="communication" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fab" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="bftsmart" type="462c0819:PsiDirectoryNode" />
+              <item name="communication" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fab" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="bftsmart" type="462c0819:PsiDirectoryNode" />
+              <item name="communication" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="netty" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fab" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="bftsmart" type="462c0819:PsiDirectoryNode" />
+              <item name="consensus" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fab" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="bftsmart" type="462c0819:PsiDirectoryNode" />
+              <item name="consensus" type="462c0819:PsiDirectoryNode" />
+              <item name="messages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fab" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="bftsmart" type="462c0819:PsiDirectoryNode" />
+              <item name="consensus" type="462c0819:PsiDirectoryNode" />
+              <item name="roles" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fab" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="bftsmart" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fab" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="bftsmart" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="microbenchmarks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fab" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="bftsmart" type="462c0819:PsiDirectoryNode" />
+              <item name="tom" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="22" width="1393" height="878" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" weight="0.3298647" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="right" auto_hide="true" id="Maven Projects" show_stripe_button="false" type="SLIDING" weight="0.32960597" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" weight="0.3298647" />
+      <window_info id="Designer" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19837157" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.25736237" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" visible="true" weight="0.1280533" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+    <buildFile url="file://$PROJECT_DIR$/build.xml">
+      <expanded value="true" />
+    </buildFile>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/build.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bftsmart/consensus/roles/Proposer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="741">
+          <caret line="55" column="29" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bftsmart/consensus/Consensus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2318">
+          <caret line="152" column="15" selection-start-line="152" selection-start-column="15" selection-end-line="152" selection-end-column="15" />
+          <folding>
+            <element signature="e#5112#5113#0" expanded="true" />
+            <element signature="e#5138#5139#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/index-all.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="235" column="82" selection-start-line="235" selection-start-column="82" selection-end-line="235" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bftsmart/tom/leaderchange/LCMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="52" column="11" selection-start-line="52" selection-start-column="11" selection-end-line="52" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bftsmart/statemanagement/strategy/StandardStateManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-422">
+          <caret line="311" column="47" selection-start-line="311" selection-start-column="47" selection-end-line="311" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bftsmart/tom/core/Synchronizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2594">
+          <caret line="548" column="26" selection-start-line="548" selection-start-column="26" selection-end-line="548" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bftsmart/clientsmanagement/ClientsManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="280" column="26" selection-start-line="280" selection-start-column="26" selection-end-line="280" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bftsmart/reconfiguration/util/TOMConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-967">
+          <caret line="104" column="17" lean-forward="true" selection-start-line="104" selection-start-column="17" selection-end-line="104" selection-end-column="17" />
+          <folding>
+            <element signature="e#11420#11421#0" expanded="true" />
+            <element signature="e#11457#11458#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bftsmart/tom/leaderchange/RequestsTimer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3230">
+          <caret line="207" column="23" selection-start-line="207" selection-start-column="23" selection-end-line="207" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bftsmart/tom/core/TOMLayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="132" column="42" selection-start-line="132" selection-start-column="42" selection-end-line="132" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bftsmart/consensus/messages/ConsensusMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2993">
+          <caret line="183" column="15" selection-start-line="183" selection-start-column="15" selection-end-line="183" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bftsmart/tom/core/messages/TOMMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-762">
+          <caret line="71" column="40" selection-start-line="71" selection-start-column="40" selection-end-line="71" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bftsmart/reconfiguration/ServerViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="324" column="15" selection-start-line="324" selection-start-column="15" selection-end-line="324" selection-end-column="15" />
+          <folding>
+            <element signature="e#11570#11571#0" expanded="true" />
+            <element signature="e#11640#11641#0" expanded="true" />
+            <element signature="e#11873#11874#0" expanded="true" />
+            <element signature="e#11934#11935#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bftsmart/communication/client/netty/NettyClientServerCommunicationSystemServerSide.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="906">
+          <caret line="119" column="83" selection-start-line="119" selection-start-column="83" selection-end-line="119" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/bftsmart/tom/ServiceProxyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1928">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/system.config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1900">
+          <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/hosts.config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bftsmart/consensus/messages/MessageFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="73" column="28" selection-start-line="73" selection-start-column="28" selection-end-line="73" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bftsmart/consensus/Epoch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="257" column="25" selection-start-line="257" selection-start-column="25" selection-end-line="257" selection-end-column="25" />
+          <folding>
+            <element signature="e#9065#9066#0" expanded="true" />
+            <element signature="e#9094#9095#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bftsmart/consensus/roles/Acceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="108" column="27" selection-start-line="108" selection-start-column="27" selection-end-line="108" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bftsmart/communication/MessageHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="66" column="24" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bftsmart/communication/client/CommunicationSystemClientSide.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bftsmart/communication/client/CommunicationSystemClientSideFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bftsmart/communication/ServerCommunicationSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="991">
+          <caret line="125" column="13" lean-forward="true" selection-start-line="125" selection-start-column="13" selection-end-line="125" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bftsmart/demo/microbenchmarks/LatencyClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="53" column="45" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bftsmart/tom/AsynchServiceProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3574">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bftsmart/demo/microbenchmarks/AsyncLatencyClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="94" column="19" selection-start-line="94" selection-start-column="19" selection-end-line="94" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bftsmart/communication/client/ReplyReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bftsmart/communication/client/netty/NettyClientServerCommunicationSystemClientSide.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="252" column="22" selection-start-line="252" selection-start-column="22" selection-end-line="252" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bftsmart/reconfiguration/ViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="99" column="34" lean-forward="true" selection-start-line="99" selection-start-column="34" selection-end-line="99" selection-end-column="34" />
+          <folding>
+            <element signature="e#2762#2763#0" expanded="true" />
+            <element signature="e#2812#2813#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bftsmart/reconfiguration/views/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="59" column="27" lean-forward="true" selection-start-line="59" selection-start-column="27" selection-end-line="59" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bftsmart/tom/ServiceProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5833">
+          <caret line="350" lean-forward="true" selection-start-line="350" selection-end-line="350" />
+          <folding>
+            <element signature="e#4507#4508#0" expanded="true" />
+            <element signature="e#4568#4569#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>9.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

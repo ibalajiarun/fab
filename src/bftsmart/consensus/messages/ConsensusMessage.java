@@ -204,10 +204,10 @@ public class ConsensusMessage extends SystemMessage {
     public String getPaxosVerboseType() {
         if (paxosType==MessageFactory.PROPOSE)
             return "PROPOSE";
+        else if (paxosType==MessageFactory.COMMITPROOF)
+            return "COMMITPROOF";
         else if (paxosType==MessageFactory.ACCEPT)
             return "ACCEPT";
-        else if (paxosType==MessageFactory.WRITE)
-            return "WRITE";
         else
             return "";
     }

@@ -244,12 +244,12 @@ public class StandardStateManager extends BaseStateManager {
                                 }
                                 e.addToProof(cm);
 
-                                if (cm.getType() == MessageFactory.ACCEPT) {
-                                    e.setAccept(cm.getSender(), cm.getValue());
+                                if (cm.getType() == MessageFactory.COMMITPROOF) {
+                                    e.setCommitProof(cm.getSender(), cm.getValue());
                                 }
 
-                                else if (cm.getType() == MessageFactory.WRITE) {
-                                    e.setWrite(cm.getSender(), cm.getValue());
+                                else if (cm.getType() == MessageFactory.ACCEPT) {
+                                    e.setAccept(cm.getSender(), cm.getValue());
                                 }
 
                             }

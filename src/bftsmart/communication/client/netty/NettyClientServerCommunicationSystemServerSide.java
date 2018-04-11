@@ -32,6 +32,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.ConnectException;
+import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.nio.channels.ClosedChannelException;
 import java.security.NoSuchAlgorithmException;
@@ -106,9 +107,11 @@ public class NettyClientServerCommunicationSystemServerSide extends SimpleChanne
 			})	.childOption(ChannelOption.SO_KEEPALIVE, true).childOption(ChannelOption.TCP_NODELAY, true);
 
 			// Bind and start to accept incoming connections.
-			ChannelFuture f = b.bind(new InetSocketAddress(controller.getStaticConf().getHost(
-					controller.getStaticConf().getProcessId()),
-					controller.getStaticConf().getPort(controller.getStaticConf().getProcessId()))).sync(); 
+//			ChannelFuture f = b.bind(new InetSocketAddress(controller.getStaticConf().getHost(
+//					controller.getStaticConf().getProcessId()),
+//					controller.getStaticConf().getPort(controller.getStaticConf().getProcessId()))).sync();
+			ChannelFuture f = b.bind(new InetSocketAddress((InetAddress) null,
+					controller.getStaticConf().getPort(controller.getStaticConf().getProcessId()))).sync();
 
 			System.out.println("-- ID = " + controller.getStaticConf().getProcessId());
 			System.out.println("-- N = " + controller.getCurrentViewN());
